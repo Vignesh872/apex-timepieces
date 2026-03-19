@@ -6,9 +6,11 @@ import { useCart } from '@/store/cartStore';
 
 const navLinks = [
   { label: 'Collections', href: '/shop' },
-  { label: 'Complications', href: '/shop?category=Complication' },
-  { label: 'Heritage', href: '/shop?category=Dress' },
-  { label: 'Sport', href: '/shop?category=Sport' },
+  { label: 'Sports', href: '/shop?category=Sports' },
+  { label: 'Formal', href: '/shop?category=Formal' },
+  { label: 'Luxury', href: '/shop?category=Luxury' },
+  { label: 'Aviation', href: '/shop?category=Aviation' },
+  { label: 'Vintage', href: '/shop?category=Vintage' },
 ];
 
 export const Navbar = () => {
@@ -29,7 +31,7 @@ export const Navbar = () => {
           </button>
 
           {/* Nav links - desktop */}
-          <div className="hidden lg:flex items-center gap-10">
+          <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
