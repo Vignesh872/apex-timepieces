@@ -147,9 +147,12 @@ const Cart = () => {
                   <span className="text-foreground font-mono text-lg">${total().toLocaleString()}</span>
                 </div>
               </div>
-              <button className="w-full py-4 bg-primary text-primary-foreground text-xs uppercase tracking-luxury hover:bg-primary/90 transition-colors mb-4">
+              <Link
+                to="/checkout"
+                className="block w-full py-4 bg-primary text-primary-foreground text-xs uppercase tracking-luxury hover:bg-primary/90 transition-colors mb-4 text-center"
+              >
                 Proceed to Checkout
-              </button>
+              </Link>
               <p className="text-[10px] text-center text-muted-foreground uppercase tracking-luxury">
                 Secure payment · International delivery
               </p>
