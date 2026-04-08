@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { SlidersHorizontal, X } from 'lucide-react';
@@ -11,14 +11,18 @@ type SortOption = 'latest' | 'price-low' | 'price-high' | 'popular';
 
 const Shop = () => {
   const [searchParams] = useSearchParams();
-  const initialCategory = searchParams.get('category') || '';
+  const categoryParam = searchParams.get('category') || '';
 
   const [search, setSearch] = useState('');
   const [selectedBrand, setSelectedBrand] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState(initialCategory);
+  const [selectedCategory, setSelectedCategory] = useState(categoryParam);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 100000]);
   const [sort, setSort] = useState<SortOption>('latest');
   const [showFilters, setShowFilters] = useState(false);
+
+  useEffect(() => {
+    setSelectedCategory(categoryParam);
+  }, [categoryParam]);
 
   const filtered = useMemo(() => {
     let result = [...watches];
