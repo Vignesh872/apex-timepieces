@@ -23,38 +23,39 @@ export const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Top bar */}
       <div className="bg-background/80 backdrop-blur-xl border-b border-foreground/[0.08]">
-        <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-foreground/60 hover:text-foreground transition-colors"
-          >
-            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16 md:h-20">
+          {/* Left: hamburger on mobile, logo always */}
+          <div className="flex items-center gap-4">
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="lg:hidden text-foreground/60 hover:text-foreground transition-colors"
+            >
+              {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+            <Link to="/" className="shrink-0">
+              <h1 className="font-serif text-xl sm:text-2xl md:text-3xl tracking-tight-luxury text-foreground">
+                HORLOGER
+              </h1>
+            </Link>
+          </div>
 
-          {/* Nav links - desktop */}
-          <div className="hidden lg:flex items-center gap-8">
+          {/* Center: nav links - desktop only */}
+          <div className="hidden lg:flex items-center gap-5 xl:gap-7">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
-                className="text-[11px] uppercase tracking-luxury text-foreground/50 hover:text-primary transition-colors duration-300"
+                className="text-[10px] xl:text-[11px] uppercase tracking-luxury text-foreground/50 hover:text-primary transition-colors duration-300 whitespace-nowrap"
               >
                 {link.label}
               </Link>
             ))}
           </div>
 
-          {/* Logo */}
-          <Link to="/" className="absolute left-1/2 -translate-x-1/2">
-            <h1 className="font-serif text-2xl md:text-3xl tracking-tight-luxury text-foreground">
-              HORLOGER
-            </h1>
-          </Link>
-
-          {/* Right icons */}
-          <div className="flex items-center gap-6">
+          {/* Right: icons */}
+          <div className="flex items-center gap-4 sm:gap-6">
             <Link to="/shop" className="text-foreground/50 hover:text-foreground transition-colors">
               <Search size={18} />
             </Link>
@@ -83,7 +84,7 @@ export const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden bg-background/95 backdrop-blur-xl border-b border-foreground/[0.08] overflow-hidden"
           >
-            <div className="px-6 py-8 flex flex-col gap-6">
+            <div className="px-6 py-6 flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
