@@ -5,12 +5,15 @@ import { ShoppingBag, Menu, X, Search } from 'lucide-react';
 import { useCart } from '@/store/cartStore';
 
 const navLinks = [
-  { label: 'Collections', href: '/shop' },
+  { label: 'All', href: '/shop' },
   { label: 'Sports', href: '/shop?category=Sports' },
   { label: 'Formal', href: '/shop?category=Formal' },
   { label: 'Luxury', href: '/shop?category=Luxury' },
   { label: 'Aviation', href: '/shop?category=Aviation' },
   { label: 'Vintage', href: '/shop?category=Vintage' },
+  { label: 'Diver', href: '/shop?category=Diver' },
+  { label: 'Casual', href: '/shop?category=Casual' },
+  { label: 'Chronograph', href: '/shop?category=Chronograph' },
 ];
 
 export const Navbar = () => {
