@@ -73,7 +73,7 @@ export const watches: Watch[] = [
     brand: 'HORLOGER',
     price: 12400,
     description: 'A masterpiece of aquatic engineering. 300m water resistance with an elegant ceramic bezel, seamlessly transitioning from ocean depths to the evening gala.',
-    images: [watch9, watch4, watch1],
+    images: [watchDiver1, watchDiver2, watch9],
     category: 'Diver',
     specs: { movement: 'Automatic Cal. H-420', caseSize: '42mm', waterResistance: '300m', strapMaterial: 'Ceramic Bracelet', dialColor: 'Ocean Blue' },
     stock: 3, isFeatured: true, rating: 4.9, reviews: 47,
