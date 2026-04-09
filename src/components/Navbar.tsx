@@ -45,13 +45,13 @@ export const Navbar = () => {
             </Link>
           </div>
 
-          {/* Center: nav links - desktop only */}
-          <div className="hidden lg:flex items-center gap-5 xl:gap-7">
+          {/* Center: nav links - desktop only, scrollable */}
+          <div className="hidden lg:flex items-center gap-3 xl:gap-5 overflow-x-auto scrollbar-hide max-w-[65%]">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
-                className="text-[10px] xl:text-[11px] uppercase tracking-luxury text-foreground/50 hover:text-primary transition-colors duration-300 whitespace-nowrap"
+                className="text-[10px] xl:text-[11px] uppercase tracking-luxury text-foreground/50 hover:text-primary transition-colors duration-300 whitespace-nowrap shrink-0"
               >
                 {link.label}
               </Link>
