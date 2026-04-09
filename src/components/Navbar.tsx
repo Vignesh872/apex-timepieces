@@ -9,11 +9,15 @@ const navLinks = [
   { label: 'Sports', href: '/shop?category=Sports' },
   { label: 'Formal', href: '/shop?category=Formal' },
   { label: 'Luxury', href: '/shop?category=Luxury' },
-  { label: 'Aviation', href: '/shop?category=Aviation' },
-  { label: 'Vintage', href: '/shop?category=Vintage' },
   { label: 'Diver', href: '/shop?category=Diver' },
-  { label: 'Casual', href: '/shop?category=Casual' },
+  { label: 'Aviation', href: '/shop?category=Aviation' },
   { label: 'Chronograph', href: '/shop?category=Chronograph' },
+  { label: 'GMT', href: '/shop?category=GMT' },
+  { label: 'Racing', href: '/shop?category=Racing' },
+  { label: 'Field', href: '/shop?category=Field' },
+  { label: 'Vintage', href: '/shop?category=Vintage' },
+  { label: 'Dress', href: '/shop?category=Dress' },
+  { label: 'Casual', href: '/shop?category=Casual' },
 ];
 
 export const Navbar = () => {
@@ -41,13 +45,13 @@ export const Navbar = () => {
             </Link>
           </div>
 
-          {/* Center: nav links - desktop only */}
-          <div className="hidden lg:flex items-center gap-5 xl:gap-7">
+          {/* Center: nav links - desktop only, scrollable */}
+          <div className="hidden lg:flex items-center gap-3 xl:gap-5 overflow-x-auto scrollbar-hide max-w-[65%]">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
-                className="text-[10px] xl:text-[11px] uppercase tracking-luxury text-foreground/50 hover:text-primary transition-colors duration-300 whitespace-nowrap"
+                className="text-[10px] xl:text-[11px] uppercase tracking-luxury text-foreground/50 hover:text-primary transition-colors duration-300 whitespace-nowrap shrink-0"
               >
                 {link.label}
               </Link>
