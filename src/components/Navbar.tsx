@@ -9,11 +9,15 @@ const navLinks = [
   { label: 'Sports', href: '/shop?category=Sports' },
   { label: 'Formal', href: '/shop?category=Formal' },
   { label: 'Luxury', href: '/shop?category=Luxury' },
-  { label: 'Aviation', href: '/shop?category=Aviation' },
-  { label: 'Vintage', href: '/shop?category=Vintage' },
   { label: 'Diver', href: '/shop?category=Diver' },
-  { label: 'Casual', href: '/shop?category=Casual' },
+  { label: 'Aviation', href: '/shop?category=Aviation' },
   { label: 'Chronograph', href: '/shop?category=Chronograph' },
+  { label: 'GMT', href: '/shop?category=GMT' },
+  { label: 'Racing', href: '/shop?category=Racing' },
+  { label: 'Field', href: '/shop?category=Field' },
+  { label: 'Vintage', href: '/shop?category=Vintage' },
+  { label: 'Dress', href: '/shop?category=Dress' },
+  { label: 'Casual', href: '/shop?category=Casual' },
 ];
 
 export const Navbar = () => {
