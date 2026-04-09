@@ -14,6 +14,22 @@ import watch13 from '@/assets/watch-13.jpg';
 import watch14 from '@/assets/watch-14.jpg';
 import watch15 from '@/assets/watch-15.jpg';
 import watch16 from '@/assets/watch-16.jpg';
+import watchSport1 from '@/assets/watch-sport-1.jpg';
+import watchSport2 from '@/assets/watch-sport-2.jpg';
+import watchDress1 from '@/assets/watch-dress-1.jpg';
+import watchDress2 from '@/assets/watch-dress-2.jpg';
+import watchDiver1 from '@/assets/watch-diver-1.jpg';
+import watchDiver2 from '@/assets/watch-diver-2.jpg';
+import watchChrono1 from '@/assets/watch-chrono-1.jpg';
+import watchAviation1 from '@/assets/watch-aviation-1.jpg';
+import watchField1 from '@/assets/watch-field-1.jpg';
+import watchRacing1 from '@/assets/watch-racing-1.jpg';
+import watchLuxury1 from '@/assets/watch-luxury-1.jpg';
+import watchLuxury2 from '@/assets/watch-luxury-2.jpg';
+import watchGmt1 from '@/assets/watch-gmt-1.jpg';
+import watchCasual1 from '@/assets/watch-casual-1.jpg';
+import watchFormal1 from '@/assets/watch-formal-1.jpg';
+import watchVintage1 from '@/assets/watch-vintage-1.jpg';
 
 export interface Watch {
   id: string;
